@@ -13,8 +13,8 @@ public class Work {
         Person sony = new Person("쏘니", korean, galaxy);
         Person beckham = new Person("베컴", english, iphone);
         
-        store.perchase(sony);
-        store.perchase(beckham);
+        store.sell(sony);
+        store.sell(beckham);
         
         sony.turnOn();
         beckham.turnOn();
@@ -24,7 +24,7 @@ public class Work {
 class Store{
     Person customer;
     
-    void perchase(Person customer){
+    void sell(Person customer){
         this.customer = customer;
         System.out.printf("%s(이/가) 핸드폰을 샀습니다.\n", customer.getName());
     }
