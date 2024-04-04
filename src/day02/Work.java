@@ -46,6 +46,10 @@ class Person {
         language.say();
         phone.turnOn();
     }
+
+    String getName(){
+        return this.name;
+    }
 }
 
 class Language {
