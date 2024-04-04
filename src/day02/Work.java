@@ -10,11 +10,14 @@ public class Work {
         Language korean = new Korean();
         Language english = new English();
 
-        Person sony = new Person("쏘니", korean, galaxy);
-        Person beckham = new Person("베컴", english, iphone);
+        Person sony = new Person("쏘니", korean);
+        Person beckham = new Person("베컴", english);
         
         store.sell(sony);
+        sony.perchase(galaxy);
+
         store.sell(beckham);
+        beckham.perchase(iphone);
         
         sony.turnOn();
         beckham.turnOn();
@@ -35,16 +38,19 @@ class Person {
     private Language language;
     private Phone phone;
     
-    Person(String name, Language language, Phone phone){
+    Person(String name, Language language){
         this.name = name;
         this.language = language;
-        this.phone = phone;
     }
     
     void turnOn(){
         System.out.printf("\n%s(이/가) 핸드폰을 켰습니다.\n", this.name);
         language.say();
         phone.turnOn();
+    }
+
+    void perchase(Phone phone){
+        this.phone = phone;
     }
 
     String getName(){
