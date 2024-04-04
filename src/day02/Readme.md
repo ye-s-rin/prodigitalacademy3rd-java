@@ -21,5 +21,5 @@ Q. 우리는 1개의 상점에서 핸드폰을 구매<br>
   - ApplePhone: bbeep 소리를 내는 휴대폰
 
 ## 의존관계
-Store -> Person
-Person -> Phone
+- Store -> Person
+- Person -> Phone
