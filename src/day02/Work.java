@@ -14,10 +14,10 @@ public class Work {
         Person beckham = new Person("베컴", english);
         
         store.sell(sony);
-        sony.perchase(galaxy);
+        sony.purchase(galaxy);
 
         store.sell(beckham);
-        beckham.perchase(iphone);
+        beckham.purchase(iphone);
         
         sony.turnOn();
         beckham.turnOn();
@@ -49,7 +49,7 @@ class Person {
         phone.turnOn();
     }
 
-    void perchase(Phone phone){
+    void purchase(Phone phone){
         this.phone = phone;
     }
 
