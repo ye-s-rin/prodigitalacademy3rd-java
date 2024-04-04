@@ -2,9 +2,10 @@ package day02;
 
 public class EX04 {
     public static void main(String[] args) {
-        Car bus = new Bus();
+        Car bus = new Bus(); // new Bus()에는 new Car()가 담겨있음
         bus.ride();
         bus.showWheelNum();
+        // bus.ring();
 
         Car taxi = new Taxi();
         taxi.ride();
@@ -29,8 +30,16 @@ class Car{
 class Bus extends Car{
 //    int wheels = 4;
 
+    Bus(){
+        super(); // 부모 클래스의 생성자를 호출 new Car();
+    }
+
     void ride(){
         System.out.println("부릉부릉");
+    }
+
+    void ring(){
+        System.out.println("삐이이");
     }
 
 //    void showWheelNum(){
