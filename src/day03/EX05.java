@@ -7,11 +7,11 @@ public class EX05 {
         // netflix.play() -> printOpeningLogo() "영상 시작"
         // netflix.finish(): sout "다 봤다~"
 
-        Netfilx netfilx = new Netfilx();
+        Netflix netflix = new Netflix();
         Tving tving = new Tving();
 
-        netfilx.play();
-        netfilx.finish();
+        netflix.play();
+        netflix.finish();
 
         tving.play();
         tving.finish();
@@ -31,7 +31,7 @@ abstract class OTT {
     }
 }
 
-class Netfilx extends OTT{
+class Netflix extends OTT{
     @Override
     void printOpeningLogo(){
         System.out.println("넷플");
