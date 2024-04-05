@@ -36,12 +36,14 @@ class Animal{
 }
 
 class Cow extends Animal{
+    @Override
     void cry(){
         System.out.println("음메");
     }
 }
 
 class Chicken extends Animal{
+    @Override
     void cry(){
         System.out.println("꼬끼오");
     }
