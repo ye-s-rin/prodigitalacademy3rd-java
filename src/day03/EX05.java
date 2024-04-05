@@ -19,12 +19,12 @@ public class EX05 {
 }
 
 abstract class OTT {
-    void play(){
-        System.out.println("영상 시작");
-        printOpeningLogo();
-    }
-
     abstract void printOpeningLogo();
+
+    void play(){
+        printOpeningLogo();
+        System.out.println("영상 시작");
+    }
 
     void finish(){
         System.out.print("다 봤다~\n\n");
