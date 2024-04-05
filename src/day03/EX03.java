@@ -28,8 +28,8 @@ class Garden{
     }
 }
 
-class Pet{
-    void cry(){}
+abstract class Pet{
+    abstract void cry();
 }
 
 class Dog extends Pet{
