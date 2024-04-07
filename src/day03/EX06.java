@@ -12,13 +12,14 @@ public class EX06 {
 
         // Person => ApplePhone 모든 기능을 사용하는 유저
         // SamsungPhone: ApplePhone 모든 기능이 있되 숫자는 다르게
+        // ApplePhone => SamsungPhone 기기변경
     }
 }
 
 class Person{
     private Phone phone;
 
-    void purchase(Phone phone){
+    void buyPhone(Phone phone){
         this.phone = phone;
     }
 
