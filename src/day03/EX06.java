@@ -13,119 +13,137 @@ public class EX06 {
         // Person => ApplePhone 모든 기능을 사용하는 유저
         // SamsungPhone: ApplePhone 모든 기능이 있되 숫자는 다르게
         // ApplePhone => SamsungPhone 기기변경
+
+        ApplePhone applePhone = new ApplePhone();
+        SamsungPhone samsungPhone = new SamsungPhone();
+
+        Person person = new Person();
+
+        person.buyPhone(applePhone);
+        person.buyPhone(samsungPhone);
     }
 }
 
-class Person{
+class Person {
     private Phone phone;
 
-    void buyPhone(Phone phone){
+    void buyPhone(Phone phone) {
         this.phone = phone;
     }
 
-    void charge(){
+    void charge() {
         phone.charge();
     }
 
-    void useKakaotalk(){
+    void useKakaotalk() {
         phone.useKakaotalk();
     }
 
-    void useYoutube(){
+    void useYoutube() {
         phone.useYoutube();
     }
 
-    void showCapacity(){
+    void showCapacity() {
         phone.showCapacity();
     }
 
-    void turnOn(){
+    void turnOn() {
         phone.turnOn();
     }
 
-    void turnOff(){
+    void turnOff() {
         phone.turnOff();
     }
 }
 
 class Phone {
-    void charge(){}
+    void charge() {
+    }
 
-    void useKakaotalk(){}
+    void useKakaotalk() {
+    }
 
-    void useYoutube(){}
+    void useYoutube() {
+    }
 
-    void showCapacity(){}
+    void showCapacity() {
+    }
 
-    void turnOn(){}
+    void turnOn() {
+    }
 
-    void turnOff(){}
+    void turnOff() {
+    }
 }
 
-class ApplePhone extends Phone{
+class ApplePhone extends Phone {
     private boolean isOn = false;
     private final int capacity = 100;
     private int battery = 100;
 
-    void charge(){
+    void charge() {
         this.battery = Math.min(this.battery + 10, capacity);
     }
 
-    void useKakaotalk(){
-        if(this.battery > 0) turnOn();
-        this.battery = Math.max(this.battery - 5, 0);
-        if(this.battery == 0) turnOff();
+    void useKakaotalk() {
+        if (isOn){
+            this.battery = Math.max(this.battery - 5, 0);
+        }
+        if (this.battery == 0) turnOff();
     }
 
-    void useYoutube(){
-        if(this.battery > 0) turnOn();
-        this.battery = Math.max(this.battery - 10, 0);
-        if(this.battery == 0) turnOff();
+    void useYoutube() {
+        if (isOn){
+            this.battery = Math.max(this.battery - 10, 0);
+        }
+        if (this.battery == 0) turnOff();
     }
 
-    void showCapacity(){
+    void showCapacity() {
         System.out.println(this.battery);
     }
 
-    void turnOn(){
+    void turnOn() {
         this.isOn = true;
     }
 
-    void turnOff(){
+    void turnOff() {
         this.isOn = false;
     }
 }
 
-class SamsungPhone extends Phone{
+class SamsungPhone extends Phone {
     private boolean isOn = false;
     private final int CAPACITY = 100;
     private int battery = 100;
 
-    void charge(){
+    void charge() {
         this.battery = Math.min(this.battery + 15, CAPACITY);
     }
 
-    void useKakaotalk(){
-        if(this.battery > 0) turnOn();
-        this.battery = Math.max(this.battery - 3, 0);
-        if(this.battery == 0) turnOff();
+    void useKakaotalk() {
+        if (isOn){
+            this.battery = Math.max(this.battery - 3, 0);
+        }
+        if (this.battery == 0) turnOff();
     }
 
-    void useYoutube(){
-        if(this.battery > 0) turnOn();
-        this.battery = Math.max(this.battery - 15, 0);
-        if(this.battery == 0) turnOff();
+    void useYoutube() {
+        if (isOn){
+            this.battery = Math.max(this.battery - 15, 0);
+        }
+        if (this.battery == 0) turnOff();
     }
 
-    void showCapacity(){
+    void showCapacity() {
         System.out.println(this.battery);
     }
 
-    void turnOn(){
+    void turnOn() {
         this.isOn = true;
     }
 
-    void turnOff(){
+    void turnOff() {
         this.isOn = false;
     }
 }
