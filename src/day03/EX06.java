@@ -56,27 +56,28 @@ class Person {
     }
 }
 
-class Phone {
-    void charge() {
-    }
+interface Phone {
+    // 1. 구현체가 어떤 게 오든 받아줄 수 있게 타입 형태로 제시
+    // => implements Phone
+    // * 추상 클래스는 extends 공통 기능 상속
+    // * 인터페이스는 implements 공통 규약, 구현
+    // 2. 구현체(객체)를 필요 = 구현체 사용 = 메소드 호출
+    //    메소드 선언(명, 매개변수) 통일
+    // * 인터페이스는 implements 공통 규약, 구현
+    void charge();
 
-    void useKakaotalk() {
-    }
+    void useKakaotalk();
 
-    void useYoutube() {
-    }
+    void useYoutube();
 
-    void showCapacity() {
-    }
+    void showCapacity();
 
-    void turnOn() {
-    }
+    void turnOn();
 
-    void turnOff() {
-    }
+    void turnOff();
 }
 
-class ApplePhone extends Phone {
+class ApplePhone implements Phone {
     private boolean isOn = false;
     private final int capacity = 100;
     private int battery = 100;
@@ -112,7 +113,7 @@ class ApplePhone extends Phone {
     }
 }
 
-class SamsungPhone extends Phone {
+class SamsungPhone implements Phone{
     private boolean isOn = false;
     private final int CAPACITY = 100;
     private int battery = 100;
