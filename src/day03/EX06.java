@@ -15,12 +15,12 @@ public class EX06 {
         // ApplePhone => SamsungPhone 기기변경
 
         ApplePhone applePhone = new ApplePhone();
-        SamsungPhone samsungPhone = new SamsungPhone();
+        SamsungPhone galaxy = new SamsungPhone();
 
         Person person = new Person();
 
         person.buyPhone(applePhone);
-        person.buyPhone(samsungPhone);
+        person.buyPhone(galaxy);
     }
 }
 
