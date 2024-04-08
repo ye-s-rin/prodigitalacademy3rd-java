@@ -82,33 +82,33 @@ class ApplePhone implements Phone {
     private final int capacity = 100;
     private int battery = 100;
 
-    void charge() {
+    public void charge() {
         this.battery = Math.min(this.battery + 10, capacity);
     }
 
-    void useKakaotalk() {
+    public void useKakaotalk() {
         if (isOn){
             this.battery = Math.max(this.battery - 5, 0);
         }
         if (this.battery == 0) turnOff();
     }
 
-    void useYoutube() {
+    public void useYoutube() {
         if (isOn){
             this.battery = Math.max(this.battery - 10, 0);
         }
         if (this.battery == 0) turnOff();
     }
 
-    void showCapacity() {
+    public void showCapacity() {
         System.out.println(this.battery);
     }
 
-    void turnOn() {
+    public void turnOn() {
         this.isOn = true;
     }
 
-    void turnOff() {
+    public void turnOff() {
         this.isOn = false;
     }
 }
@@ -118,33 +118,33 @@ class SamsungPhone implements Phone{
     private final int CAPACITY = 100;
     private int battery = 100;
 
-    void charge() {
+    public void charge() {
         this.battery = Math.min(this.battery + 15, CAPACITY);
     }
 
-    void useKakaotalk() {
+    public void useKakaotalk() {
         if (isOn){
             this.battery = Math.max(this.battery - 3, 0);
         }
         if (this.battery == 0) turnOff();
     }
 
-    void useYoutube() {
+    public void useYoutube() {
         if (isOn){
             this.battery = Math.max(this.battery - 15, 0);
         }
         if (this.battery == 0) turnOff();
     }
 
-    void showCapacity() {
+    public void showCapacity() {
         System.out.println(this.battery);
     }
 
-    void turnOn() {
+    public void turnOn() {
         this.isOn = true;
     }
 
-    void turnOff() {
+    public void turnOff() {
         this.isOn = false;
     }
 }
