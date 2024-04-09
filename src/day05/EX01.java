@@ -13,7 +13,7 @@ public class EX01 {
         BluetoothMic bluetoothMic = new BluetoothMic();
 
         bluetoothMic.bgm("bgm");
-        bluetoothMic.sing();
+        bluetoothMic.amplify();
     }
 }
 
@@ -22,7 +22,7 @@ interface Speaker {
 }
 
 interface Mic {
-    void sing();
+    void amplify();
 }
 
 class BluetoothMic implements Speaker, Mic {
@@ -33,7 +33,7 @@ class BluetoothMic implements Speaker, Mic {
     }
 
     @Override
-    public void sing() {
+    public void amplify() {
         System.out.println("블루투스 마이크로 노래를 부릅니다.");
     }
 }
