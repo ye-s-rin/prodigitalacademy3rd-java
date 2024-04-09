@@ -1,6 +1,6 @@
 package day05;
 
-public class EX02 {
+public class nonCommit01 {
     int _quantitiy;
     int _itemPrice;
     int discountLevel;
