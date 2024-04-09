@@ -3,7 +3,7 @@ package day05;
 public class EX01 {
     public static void main(String[] args) {
         // 블루투스(스피커)마이크
-        // interface or abstract class
+        // interface or abstract class: 다중 상속을 위해 interface 사용
         //  -> 블루투스 스피커: BGM(음악)
         //  -> 마이크: 노래를 부를 수 있음
         // class BluetoothMic
