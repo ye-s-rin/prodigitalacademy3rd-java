@@ -8,11 +8,9 @@ import java.util.List;
 import org.junit.Test;
 
 public class ReportTest {
-	
-	
 	@Test
 	public void testReport() throws Exception {
-		
+
 		Writer out = new OutputStreamWriter(System.out);
 		
 		Machine machine1= new Machine("name1", "location1");
@@ -28,21 +26,14 @@ public class ReportTest {
 		machines.add(machine1);
 		machines.add(machine2);
 		machines.add(machine3);
-		
-		
 				
 		Robot robot = new Robot();
 		robot.moveToMachine(machine2);
 		robot.pickBasket();
-		
-		
+
 		Report report = new Report();
 		report.report(out, machines, robot);
 		
 		out.close();
-		
-		
 	}
-	
-
 }

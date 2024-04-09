@@ -1,6 +1,10 @@
 package day05.practice01;
 
+import java.io.IOException;
+import java.io.Writer;
+
 public class Robot {
+
     Machine machine;
     String basket;
 
@@ -27,8 +31,10 @@ public class Robot {
         basket = null;
     }
 
-    @Override
-    public String toString() {
+    public void printRobotStatus(Writer out) throws IOException {
+
+        out.write("Robot");
+
         StringBuffer sb = new StringBuffer();
 
         if (machine != null)
@@ -37,6 +43,7 @@ public class Robot {
         if (basket != null)
             sb.append(" bin=" ).append(basket);
 
-        return sb.toString();
+        sb.append("\n");
+        out.write(sb.toString());
     }
 }

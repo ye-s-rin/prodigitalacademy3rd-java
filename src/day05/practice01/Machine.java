@@ -1,6 +1,9 @@
 package day05.practice01;
+import java.io.IOException;
+import java.io.Writer;
 
 public class Machine {
+
     String name;
     String location;
     String bin;
@@ -30,8 +33,7 @@ public class Machine {
         this.bin = basket;
     }
 
-    @Override
-    public String toString() {
+    public void printMachineStatus(Writer out) throws IOException {
         StringBuffer sb = new StringBuffer();
 
         sb.append("Machine : ").append(name);
@@ -40,6 +42,6 @@ public class Machine {
             sb.append(" bin = ").append(bin);
 
         sb.append("\n");
-        return sb.toString();
+        out.write(sb.toString());
     }
 }
