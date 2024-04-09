@@ -10,17 +10,18 @@ public class EX02 {
         return discountLevel;
     }
 
-    double getDiscountedPrice(int basePrice, int discountLevel){
-        // discountLevel 스위치는 생략
-        return basePrice * discountLevel;
+    // 멤버 변수는 매개변수로 전달할 필요X
+    // double getDiscountedPrice(int basePrice, int discountLevel){
+    double getDiscountedPrice(){
+        // return basePrice * discountLevel;
+        return (_quantitiy * _itemPrice) * getDiscountLevel();
     }
 
     void method(){
-        int basePrice = _quantitiy * _itemPrice; // 정가
-        discountLevel = getDiscountLevel(); // 할인률
+        // 지역변수는 적을수록 좋다
+        // int basePrice = _quantitiy * _itemPrice; // 정가
+        // discountLevel = getDiscountLevel(); // 할인률
 
-        double finalPrice = getDiscountedPrice(basePrice, discountLevel);
-
-        System.out.printf("최종 금액은 %d 달러입니다.\n", finalPrice);
+        System.out.printf("최종 금액은 %f 달러입니다.\n", getDiscountedPrice());
     }
 }
