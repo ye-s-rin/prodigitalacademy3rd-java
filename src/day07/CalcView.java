@@ -17,7 +17,7 @@ public class CalcView extends JFrame implements ActionListener {
     JLabel la_result = new JLabel("결과 출력");
 
     // Controller
-    CalcController controller;
+    private CalcController controller;
 
     CalcView(CalcController controller) {
 
@@ -48,7 +48,7 @@ public class CalcView extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         // 더하기 버튼이 클릭되면,
         if (e.getSource() == btn_plus) {
-            la_result.setText(controller.resPlus(tf_num1.getText(), tf_num2.getText()));
+            la_result.setText(controller.reqPlus(tf_num1.getText(), tf_num2.getText()));
         }
     }
 }

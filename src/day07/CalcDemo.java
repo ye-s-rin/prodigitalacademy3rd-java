@@ -4,6 +4,7 @@ public class CalcDemo {
 
     public static void main(String[] args) {
 
-        new CalcView(new CalcController(new CalcModel()));
+        CalcController controller = new CalcController(new CalcModel());
+
     }
 }
