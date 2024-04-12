@@ -42,6 +42,8 @@ public class CalcView extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         // 더하기 버튼이 클릭되면,
-        la_result.setText("더하기 버튼 눌렸다!");
+        if (e.getSource() == btn_plus) {
+            la_result.setText("더하기 버튼 눌렸다!");
+        }
     }
 }
