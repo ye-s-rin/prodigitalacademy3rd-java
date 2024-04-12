@@ -10,7 +10,19 @@ public class CalcController {
         this.view = new CalcView(this);
     }
 
-    String reqPlus(String num1, String num2) {
-        return String.valueOf(model.plus(Integer.parseInt(num1), Integer.parseInt(num2)));
+    String reqPlus(String strNum1, String strNum2) {
+        return String.valueOf(model.plus(Integer.parseInt(strNum1), Integer.parseInt(strNum2)));
+    }
+
+    public String reqMinus(String strNum1, String strNum2) {
+        return String.valueOf(model.minus(Integer.parseInt(strNum1), Integer.parseInt(strNum2)));
+    }
+
+    public String reqMulti(String strNum1, String strNum2) {
+        return String.valueOf(model.multi(Integer.parseInt(strNum1), Integer.parseInt(strNum2)));
+    }
+
+    public String reqDivide(String strNum1, String strNum2) {
+        return String.valueOf(model.divide(Integer.parseInt(strNum1), Integer.parseInt(strNum2)));
     }
 }
