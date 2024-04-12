@@ -16,7 +16,12 @@ public class CalcView extends JFrame implements ActionListener {
     // 라벨 = 가변 이름표
     JLabel la_result = new JLabel("결과 출력");
 
-    CalcView() {
+    // Controller
+    CalcController controller;
+
+    CalcView(CalcController controller) {
+
+        this.controller = controller;
 
         setSize(300, 200); // 창 크기
         setLayout(null); // 레이아웃 매니저 초기화
@@ -43,7 +48,7 @@ public class CalcView extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         // 더하기 버튼이 클릭되면,
         if (e.getSource() == btn_plus) {
-            la_result.setText("더하기 버튼 눌렸다!");
+            la_result.setText(controller.resPlus(tf_num1.getText(), tf_num2.getText()));
         }
     }
 }
