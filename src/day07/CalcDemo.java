@@ -1,8 +1,8 @@
 package day07;
 
-public class SwingDemo {
+public class CalcDemo {
 
     public static void main(String[] args) {
-        new MainView();
+        new CalcView();
     }
 }
