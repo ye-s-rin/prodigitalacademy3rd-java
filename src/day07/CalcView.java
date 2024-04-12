@@ -1,8 +1,10 @@
 package day07;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 
-public class CalcView extends JFrame {
+public class CalcView extends JFrame implements ActionListener {
 
     // text field 생성
     JTextField tf_num1 = new JTextField();
@@ -24,6 +26,8 @@ public class CalcView extends JFrame {
         btn_plus.setBounds(150, 50, 80, 40);
         la_result.setBounds(50, 100, 200, 40);
 
+        btn_plus.addActionListener(this);
+
         add(tf_num1);
         add(tf_num2);
         add(btn_plus);
@@ -33,5 +37,11 @@ public class CalcView extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // 더하기 버튼이 클릭되면,
+        la_result.setText("더하기 버튼 눌렸다!");
     }
 }
