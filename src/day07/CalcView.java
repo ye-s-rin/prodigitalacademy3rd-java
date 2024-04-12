@@ -2,7 +2,7 @@ package day07;
 
 import javax.swing.*;
 
-public class MainView extends JFrame {
+public class CalcView extends JFrame {
 
     // text field 생성
     JTextField tf_num1 = new JTextField();
@@ -14,7 +14,7 @@ public class MainView extends JFrame {
     // 라벨 = 가변 이름표
     JLabel la_result = new JLabel("결과 출력");
 
-    MainView() {
+    CalcView() {
 
         setSize(300, 200); // 창 크기
         setLayout(null); // 레이아웃 매니저 초기화
